@@ -1,0 +1,22 @@
+uv venv <env_name>: Create a new virtual environment.
+uv pip install: Install packages into the current environment.
+uv pip show: Show details about an installed package.
+uv pip freeze: List installed packages and their versions.
+uv pip check: Check that the current environment has compatible packages.
+uv pip list: List installed packages.
+uv pip uninstall: Uninstall packages.
+uv pip tree: View the dependency tree for the environment.
+uv cache clean: Remove cache entries.
+uv cache prune: Remove outdated cache entries.
+uv cache dir: Show the uv cache directory path.
+uv tool dir: Show the uv tool directory path.
+uv python dir: Show the uv installed Python versions path.
+uv self update: Update uv to the latest version.
+
+## Project 
+uv init: Create a new Python project.
+uv add: Add a dependency to the project.
+uv remove: Remove a dependency from the project.
+uv sync: Sync the project's dependencies with the environment.
+uv lock: Create a lockfile for the project's dependencies.
+uv run: Run a command in the project environment.
