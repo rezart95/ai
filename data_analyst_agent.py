@@ -45,12 +45,12 @@ generate_prompt = SystemMessage(
 
 def generate_sql(state: State) -> State:
     user_message = HumanMessage(state["user_query"])
-    messages = [generate_prompt, *state["messages"], user_message]
+    messages = [generate_prompt, *state["message"], user_message]
     res = model_low_temp.invoke(messages)
     return {
         "sql_query": res.content,
         # update conversation history
-        "messages": [user_message, res],
+        "message": [user_message, res],
     }
 
 
@@ -63,13 +63,13 @@ def explain_sql(state: State) -> State:
     messages = [
         explain_prompt,
         # contains user's query and SQL query from previous step
-        *state["messages"],
+        *state["message"],
     ]
     res = model_high_temp.invoke(messages)
     return {
         "sql_explanation": res.content,
         # update conversation history
-        "messages": res,
+        "message": res,
     }
 
 
@@ -81,3 +81,8 @@ builder.add_edge("generate_sql", "explain_sql")
 builder.add_edge("explain_sql", END)
 
 graph = builder.compile()
+
+# Test the graph with a sample query
+result = graph.invoke({"user_query": "Show me all customers from New York"})
+print("SQL Query:", result["sql_query"])
+print("Explanation:", result["sql_explanation"])
