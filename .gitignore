@@ -1,5 +1,3 @@
-ai-env/
-.env
 .venv/
-
 .vscode/
+chroma_db/.env
