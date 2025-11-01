@@ -2,7 +2,7 @@
 
 A compact repository for learning retrieval‑augmented generation (RAG) and multi‑agent AI workflows using LangGraph. Code is handcrafted and used for experimenting with real examples and tests — no AI‑generated code is included.
 
-Books / references used (images in-line):
+Books / references used:
 
 <table>
   <tr>
