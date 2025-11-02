@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "beautifulsoup4>=4.14.2",
+    "chromadb>=1.3.0",
     "duckduckgo-search>=8.1.1",
     "ipython>=9.6.0",
     "langchain>=1.0.2",
@@ -15,10 +16,13 @@ dependencies = [
     "langchain-experimental>=0.0.42",
     "langchain-openai>=1.0.1",
     "langchain-postgres>=0.0.16",
+    "langchain-tavily>=0.2.12",
+    "langchainhub>=0.1.21",
     "langgraph>=1.0.1",
     "pre-commit>=4.3.0",
     "python-dotenv>=1.1.1",
     "tavily-python>=0.7.12",
+    "tiktoken>=0.12.0",
 ]
 
 [tool.ruff]
